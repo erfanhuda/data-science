@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21d4dd55-c84d-4a98-b015-66b43f54afa7" name="Default Changelist" comment="" />
+    <list default="true" id="21d4dd55-c84d-4a98-b015-66b43f54afa7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rate data/commodities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +18,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rate_idr.py">
+        <entry file="file://$PROJECT_DIR$/rate data/commodities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="323">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rate data/rate_idr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" selection-end-column="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -33,11 +50,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test_bbi.py" />
         <option value="$PROJECT_DIR$/scrap.py" />
+        <option value="$PROJECT_DIR$/rate data/rate_idr.py" />
+        <option value="$PROJECT_DIR$/rate data/commodities.py" />
       </list>
     </option>
   </component>
@@ -52,31 +74,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="data-science" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-science" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="data-science" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-science" type="462c0819:PsiDirectoryNode" />
+              <item name="rate data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/env" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -144,7 +163,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49757674" weight="0.14012739" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49757674" visible="true" weight="0.13987392" />
       <window_info id="Structure" order="1" sideWeight="0.5024233" side_tool="true" weight="0.09732073" />
       <window_info id="Favorites" order="2" sideWeight="0.5024233" side_tool="true" weight="0.09732073" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -155,7 +174,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49960598" visible="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960598" weight="0.31527627" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500394" side_tool="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32932165" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -164,13 +183,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_bbi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bbi.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/zipfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -185,19 +198,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrap.py">
+    <entry file="file://$PROJECT_DIR$/scrap.py" />
+    <entry file="file://$PROJECT_DIR$/rate_idr.py" />
+    <entry file="file://$PROJECT_DIR$/rate data/rate_idr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="54" column="60" lean-forward="true" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate_idr.py">
+    <entry file="file://$PROJECT_DIR$/rate data/commodities.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="323">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
