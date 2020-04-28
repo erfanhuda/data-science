@@ -59,6 +59,6 @@ def rate_pajak():
         df = df.append(pd.Series(values, index=columns), ignore_index=True)
         print(df, fdate.text.replace('\n\t\t\t\t\t\t', ''))
 
-        df.to_excel(str(today)+'rate_pajak.xlsx', index=False)
+        df.to_excel(fdate.text.replace('\n\t\t\t\t\t\t', '')+'rate_pajak.xlsx', index=False)
 
 rate_pajak()
