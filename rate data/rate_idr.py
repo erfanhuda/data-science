@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import date
 
+## Created by Muhammad Erfan Huda
+## Followed git on @mandauhitam
 
 today = date.today()
 headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36'}
@@ -19,7 +21,6 @@ def rate_bi():
     rows = table.find_all('tr')
     columns = [i.text.replace('Grafik', '') for i in rows[0].find_all('th')]
 
-    # print(rows)
     df = pd.DataFrame(columns=columns)
     for i in range(1, len(rows)):
         tds = rows[i].find_all('td')
@@ -27,7 +28,6 @@ def rate_bi():
             values = [tds[0].text, tds[1].text, tds[2].text, tds[3].text, tds[4].text.replace('\n\n', '')]
         else:
             values = [td.text.replace('\n', '').replace('\xa0', '') for td in tds]
-        # print(values)
         df = df.append(pd.Series(values, index=columns), ignore_index=True)
         print(df, fdate)
 
@@ -47,7 +47,6 @@ def rate_pajak():
     rows = table.find_all('tr')
     columns = [i.text.replace('Nilai', 'Rate') for i in rows[0].find_all('td')]
 
-    # print(len(rows))
     df = pd.DataFrame(columns=columns)
     for i in range(1, len(rows)):
         tds = rows[i].find_all('td')
