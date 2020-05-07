@@ -9,13 +9,14 @@ import time
 ## Follow on GitHub : @mandauhitam
 
 class RateBot():
-    def __init__(self, clock):
+    def __init__(self, a, b):
         self.today = date.today()
         self.headers = {
             "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36'}
         self.URL_BI = 'https://www.bi.go.id/id/moneter/informasi-kurs/transaksi-bi/Default.aspx'
         self.URL_Pajak = 'https://www.ortax.org/ortax/?mod=kurs'
-        self.clock = clock
+        self.bi_hours = a
+        self.pajak_hours = b
 
     def rate_bi(self):
         page = requests.get(self.URL_BI, headers=self.headers)
@@ -38,6 +39,11 @@ class RateBot():
             print(df, fdate)
 
             df.to_excel(str(self.today)+' rate_bi.xlsx', index=False)
+
+        schedule.every(self.bi_hours).hour.do(RateBot.rate_bi(self))
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
 
     def rate_pajak(self):
         page = requests.get(self.URL_Pajak, headers=self.headers)
@@ -62,14 +68,11 @@ class RateBot():
 
             df.to_excel(fdate.text.replace('\n\t\t\t\t\t\t', '')+'rate_pajak.xlsx', index=False)
 
-    def schedule(self):
-        schedule.every().day.at(self.clock)
+        schedule.every(self.pajak_hours).hour.do(RateBot.rate_pajak(self))
         while True:
             schedule.run_pending()
             time.sleep(1)
-            schedule.clear()
 
-runbot = RateBot('20:24')
-runbot.rate_bi()
-runbot.rate_pajak()
-runbot.schedule()
+Run = RateBot(1, 8)
+Run.rate_bi()
+Run.rate_pajak()
