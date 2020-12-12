@@ -6,7 +6,7 @@ import schedule
 import time
 
 ## Created by Erfan
-## Follow on GitHub : @mandauhitam
+## Follow me on GitHub : @mandauhitam
 
 class RateBot():
     def __init__(self, a, b):

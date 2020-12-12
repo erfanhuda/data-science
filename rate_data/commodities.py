@@ -26,8 +26,9 @@ def gold_silver():
         df = df.append(pd.Series(columns, index=rows), ignore_index=True)
         print(df, str(datetime.now()))
 
-schedule.every().day.at("20:59").do(gold_silver)
+    schedule.every(1).minutes.do(gold_silver())
 
+gold_silver()
 while True:
     schedule.run_pending()
-    time.sleep(1)
+    time.sleep(5)
