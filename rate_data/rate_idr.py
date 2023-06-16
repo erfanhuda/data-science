@@ -9,14 +9,14 @@ import time
 ## Follow me on GitHub : @mandauhitam
 
 class RateBot():
-    def __init__(self, a, b):
+    def __init__(self, bi_hours, pajak_hours):
         self.today = date.today()
         self.headers = {
             "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36'}
-        self.URL_BI = 'https://www.bi.go.id/id/moneter/informasi-kurs/transaksi-bi/Default.aspx'
+        self.URL_BI = 'https://www.bi.go.id/id/statistik/informasi-kurs/transaksi-bi/Default.aspx'
         self.URL_Pajak = 'https://www.ortax.org/ortax/?mod=kurs'
-        self.bi_hours = a
-        self.pajak_hours = b
+        self.bi_hours = bi_hours
+        self.pajak_hours = pajak_hours
 
     def rate_bi(self):
         page = requests.get(self.URL_BI, headers=self.headers)
@@ -72,7 +72,3 @@ class RateBot():
         while True:
             schedule.run_pending()
             time.sleep(1)
-
-Run = RateBot(1, 8)
-Run.rate_bi()
-Run.rate_pajak()
