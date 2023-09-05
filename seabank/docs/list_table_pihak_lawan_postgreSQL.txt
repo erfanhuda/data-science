@@ -1,0 +1,19 @@
+ Schema |                    Name                    | Type  |  Owner
+--------+--------------------------------------------+-------+----------
+ public | lps_scv_pihaklawan                         | table | postgres
+ public | lps_scv_pihaklawan_backup_20230206         | table | postgres
+ public | lrr_validasi_data_pihaklawan               | table | postgres
+ public | lrr_validasi_data_pihaklawan_duplicate     | table | postgres
+ public | lrr_validasi_data_pihaklawan_not_duplicate | table | postgres
+ public | pihaklawan                                 | table | postgres
+ public | pihaklawan10                               | table | postgres
+ public | pihaklawan_db_wo_cif                       | table | postgres
+ public | pihaklawan_ktp                             | table | postgres
+ public | pihaklawan_ktp_relpar                      | table | postgres
+ public | pihaklawan_pelaporan_202303                | table | postgres
+ public | pihaklawan_tab_db                          | table | postgres
+ public | pihaklawan_tax_cif                         | table | postgres
+ public | pihaklawan_update_dob                      | table | postgres
+ public | pihaklawan_update_name                     | table | postgres
+ public | pihaklawancbr                              | table | postgres
+(16 rows)
