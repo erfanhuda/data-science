@@ -1,4 +1,37 @@
 import requests
+import mysql.connector
+
+# MySQL server configuration
+config = {
+    'user': 'dev_erfan',
+    'password': 'uX4w&m2cYdSLMK',
+    'host': '10.162.34.96',
+    'port': '6608',
+    'database': 'sbid_fin_dm_rep'
+}
+
+try:
+    # Establish a connection to the MySQL server
+    connection = mysql.connector.connect(**config)
+
+    if connection.is_connected():
+        print('Connected to FDM Dev server')
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM sbid_fin_dm_rep.lns_jf_productcode_tenor_daily_vw;")
+
+        print(cursor.fetchall())
+        # Perform further operations if needed
+
+except mysql.connector.Error as error:
+    print(f'Failed to connect to MySQL server: {error}')
+
+finally:
+    # Close the connection
+    if 'connection' in locals():
+        connection.close()
+        print('Connection closed')
+
+
 
 url = "https://hue1.id.seabank.io/hue/accounts/login"
 headers = {
@@ -14,45 +47,45 @@ headers = {
            "Sec-Ch-Ua-Mobile":"0","Sec-Ch-Ua-Platform":"Windows","Sec-Fetch-Dest":"document","Sec-Fetch-Mode":"navigate","Sec-Fetch-Site":"same-origin","Sec-Fetch-User":"?1","Upgrade-Insecure-Requests":"1","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",}
 
 
-body = {"csrfmiddlewaretoken": "nbhavIR1Lb7Xw5WyETVu9yMcgYjd56ZMg7MohKLzXMmKlTMymhtu3XNw42tqMFUM","username": "muhammad.huda","password": "UPj8sksr","next": "/"}
+# body = {"csrfmiddlewaretoken": "nbhavIR1Lb7Xw5WyETVu9yMcgYjd56ZMg7MohKLzXMmKlTMymhtu3XNw42tqMFUM","username": "muhammad.huda","password": "UPj8sksr","next": "/"}
 
-login = requests.post(url, data=body, headers=headers)
+# login = requests.post(url, data=body, headers=headers)
 
 
-from dataclasses import dataclass
-from typing import Protocol
-import psycopg2
+# from dataclasses import dataclass
+# from typing import Protocol
+# import psycopg2
 
-@dataclass
-class Connection:
-    host: str = "localhost"
-    port: int
-    username: str
-    password: str
-    database: str
+# @dataclass
+# class Connection:
+#     host: str
+#     port: int
+#     username: str
+#     password: str
+#     database: str
 
-class ConnectionInterface(Protocol):
-    """Interface connection for database connection"""
-    def connect():
-        """CTA for connect to database as choosen"""
+# class ConnectionInterface(Protocol):
+#     """Interface connection for database connection"""
+#     def connect():
+#         """CTA for connect to database as choosen"""
 
-    def save():
-        """CTA to save connection in db.ini"""
+#     def save():
+#         """CTA to save connection in db.ini"""
 
-class ImpalaConnection(ConnectionInterface):
-    def connect(self):
-        self.connection = Connection()
+# class ImpalaConnection(ConnectionInterface):
+#     def connect(self):
+#         self.connection = Connection()
 
-    def save(self):
-        with open("db.ini", "w") as f:
-            f.write(self.connection) 
+#     def save(self):
+#         with open("db.ini", "w") as f:
+#             f.write(self.connection) 
 
-class PostgreSQL(ConnectionInterface):
-    def connect():
-        pass
+# class PostgreSQL(ConnectionInterface):
+#     def connect():
+#         pass
 
-    def save():
-        pass
+#     def save():
+#         pass
 
-    def log():
-        pass
+#     def log():
+#         pass
